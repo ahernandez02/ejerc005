@@ -8,9 +8,11 @@ import java.io.IOException;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+import es.cic.Figuras.Cuadrado;
+import es.cic.Figuras.Linea;
 import es.cic.Figuras.Punto;
 
-class LienzoTest {
+class LienzoIntegrationTest {
 
 	private Lienzo lienzo;
 	
@@ -42,15 +44,26 @@ class LienzoTest {
 	@Test
 	void testMostrarLienzo() throws IOException 
 	{
-		Punto pt1 = new Punto(500, 500, new Color(255, 0, 0)); 
-		this.lienzo.dibujarEnLienzo(pt1);
-		Punto pt2 = new Punto(505, 500, new Color(0, 255, 0));
-		this.lienzo.dibujarEnLienzo(pt2);
-		Punto pt3 = new Punto(510, 500, new Color(0, 0, 255));
-		this.lienzo.dibujarEnLienzo(pt3);
+		Punto pt3 = new Punto(500, 850, new Color(255, 0, 0));
+		this.lienzo.dibujarEnLienzo(pt3);	
+		Linea l = new Linea(500,800, new Color(0,255,0), 500);
+		this.lienzo.dibujarEnLienzo(l);
+		Cuadrado c = new Cuadrado(500,500, new Color(0,0,255), 250_000);
+		this.lienzo.dibujarEnLienzo(c);
 		
 		this.lienzo.mostrarLienzo();
 	}
+	
+	/*
+	@Test
+	void testMostrarLienzoConFiguraFueraDeLimite() throws IOException 
+	{
+		Cuadrado c = new Cuadrado(100,500, new Color(255,0,0), 250_000);
+		this.lienzo.dibujarEnLienzo(c);
+		
+		this.lienzo.mostrarLienzo();
+	}
+	*/
 	
 
 }

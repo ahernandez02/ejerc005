@@ -12,8 +12,8 @@ import javax.imageio.ImageIO;
 
 public class Lienzo 
 {
-	private final int ALTURA = 1000;
-	private final int ANCHURA = 1000;
+	public static final int ALTURA = 1000;
+	public static final int ANCHURA = 1000;
 	private final int COLOR_LIENZO_DEFAULT = new Color(255, 255, 255).getRGB();
 	
 	//Equivalente a los pixeles de la imagen que cuando se dibujen se volcara sobre la img

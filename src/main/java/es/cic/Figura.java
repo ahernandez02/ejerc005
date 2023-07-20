@@ -22,8 +22,8 @@ public abstract class Figura
 	
 	public Figura(int x, int y, Color color)
 	{
-		this.x = x;
-		this.y = y;
+		this.x = Math.abs(x); //Controla que no tengan valores negativos
+		this.y = Math.abs(y);
 		this.color = color.getRGB();
 		this.coordenadas = new ArrayList<Integer>();
 	}
