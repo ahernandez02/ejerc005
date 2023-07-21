@@ -1,8 +1,6 @@
 package es.cic.Figuras;
 
 import java.awt.Color;
-import java.util.ArrayList;
-
 import es.cic.Figura;
 import es.cic.Lienzo;
 

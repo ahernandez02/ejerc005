@@ -38,37 +38,22 @@ public class Cuadrado extends Figura {
 					//Pos
 					this.coordenadas.add(this.x + j);
 					this.coordenadas.add(this.y + h);
+					
+					this.coordenadas.add(this.x + j);
+					this.coordenadas.add(this.y - h);
 				}
 				if(!(this.x - j < 0) && !(this.y + h > Lienzo.ALTURA))
 				{
 					//Neg
 					this.coordenadas.add(this.x - j);
 					this.coordenadas.add(this.y + h);
-				}
-			}
-			h++;
-		}
-		
-		h = 0;
-		
-		for (int i = 0; i < h_NEG; i++) 
-		{	
-			for (int j = 0; j < Math.floor(l / 2); j++) 
-			{
-				if(!(this.x + j > Lienzo.ANCHURA) && !(this.y - h < 0)) 
-				{
-					this.coordenadas.add(this.x + j);
-					this.coordenadas.add(this.y - h);
-				}
-				
-				if(!(this.x - j < 0) && !(this.y - h < 0))
-				{
+					
 					this.coordenadas.add(this.x - j);
 					this.coordenadas.add(this.y - h);
-				}	
+				}
 			}
 			h++;
-		}  
+		} 
 	}
 
 }

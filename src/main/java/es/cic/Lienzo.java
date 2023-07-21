@@ -27,7 +27,7 @@ public class Lienzo
 	}
 	
 
-	public void dibujarEnLienzo(Figura figura)
+	public void dibujar(Figura figura)
 	{
 	  //Hace el calculo de las coordenadas según la figura.
 	  figura.dibujar();
@@ -43,7 +43,7 @@ public class Lienzo
 	  }
 	}
 	
-	public void mostrarLienzo() throws IOException
+	public void mostrar() throws IOException
 	{				
 		BufferedImage image = new BufferedImage(ALTURA, ANCHURA, BufferedImage.TYPE_INT_RGB);
 		
