@@ -25,11 +25,9 @@ public class Cuadrado extends Figura {
 			return;
 		
 		int l = (int)floor(sqrt(area));
-		int h = 0;
-		int h_POS = (int)ceil(l/2);
-		int h_NEG = l - h_POS;
+		int h = (int)floor(l/2);
 	
-		for (int i = 0; i < h_POS; i++) 
+		for (int i = 0; i < h; i++) 
 		{	
 			for (int j = 0; j < Math.floor(l / 2); j++) 
 			{
@@ -37,22 +35,21 @@ public class Cuadrado extends Figura {
 				{
 					//Pos
 					this.coordenadas.add(this.x + j);
-					this.coordenadas.add(this.y + h);
+					this.coordenadas.add(this.y + i);
 					
 					this.coordenadas.add(this.x + j);
-					this.coordenadas.add(this.y - h);
+					this.coordenadas.add(this.y - i);
 				}
 				if(!(this.x - j < 0) && !(this.y + h > Lienzo.ALTURA))
 				{
 					//Neg
 					this.coordenadas.add(this.x - j);
-					this.coordenadas.add(this.y + h);
+					this.coordenadas.add(this.y + i);
 					
 					this.coordenadas.add(this.x - j);
-					this.coordenadas.add(this.y - h);
+					this.coordenadas.add(this.y - i);
 				}
 			}
-			h++;
 		} 
 	}
 
