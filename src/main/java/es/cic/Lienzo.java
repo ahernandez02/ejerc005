@@ -7,6 +7,7 @@ import java.awt.image.WritableRaster;
 import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.List;
 
 import javax.imageio.ImageIO;
 
@@ -18,11 +19,11 @@ public class Lienzo
 	
 	//Equivalente a los pixeles de la imagen que cuando se dibujen se volcara sobre la img
 	private int[][] lienzo;
-	private ArrayList<Figura> figuras;
+	private List<Figura> figuras;
 	
 	public Lienzo()
 	{
-		this.figuras = new ArrayList<Figura>();
+		this.figuras = new ArrayList<>();
 		this.lienzo = new int[ALTURA][ANCHURA];
 	}
 	
@@ -62,6 +63,13 @@ public class Lienzo
 		
 		File outputfile = File.createTempFile("lienzo", ".png");
 		ImageIO.write(image, "png", outputfile);
+	}
+	
+	public int[][] getLienzo() {
+		return lienzo;
+	}
+	public List<Figura> getFiguras() {
+		return figuras;
 	}
 	
 	
